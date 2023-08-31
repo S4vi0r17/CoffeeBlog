@@ -210,3 +210,27 @@ img {
     padding-bottom: 2rem;
     margin-top: 3rem;
 }
+
+/* About Us */
+
+@media (min-width: 768px) {
+    .aboutus {
+        display: flex;
+        gap: 2rem;
+    }
+
+    .aboutus--img,
+    .aboutus--text {
+        flex-basis: 50%;
+    }
+
+    /* Esto es lo mismo 
+        .aboutus{
+            display: grid;
+            grid-template-columns: repeat(2,1fr);
+            column-gap: 2rem;
+        } 
+    */
+}
+
+.aboutus {}
