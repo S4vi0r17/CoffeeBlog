@@ -5,12 +5,32 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Coffee Blog</title>
-    <link rel="stylesheet" href="css/normalize.css">
+
+    <!-- Prefetch: carga el siguiente documento probable -->
+    <link rel="prefetch" href="about.html" as="document">
+
+    <!-- <link rel="stylesheet" href="css/normalize.css"> -->
+    <!-- Debajo creo que el preconnect funciona como preload -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans&family=PT+Sans:wght@400;700&display=swap"
         rel="stylesheet">
+    <!-- <link rel="stylesheet" href="css/styles.css"> -->
+
+    <!-- Preload -->
+
+    
+    <link rel="preload" href="css/normalize.css" as="style">
+    <link rel="stylesheet" href="css/normalize.css">
+
+    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Open+Sans&family=PT+Sans:wght@400;700&display=swap" crossorigin="crossorigin" as="font">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans&family=PT+Sans:wght@400;700&display=swap" rel="stylesheet">
+
+    <link rel="Preload" href="css/styles.css" as="style">
     <link rel="stylesheet" href="css/styles.css">
+
+    <link rel="preload" href="img/blog1.jpg" as="image">
+
 </head>
 
 <body>
@@ -37,7 +57,7 @@
             <h3>Our Blog</h3>
             <article class="blog--post">
                 <div class="post--img">
-                    <img src="img/blog1.jpg" alt="blog image">
+                    <img loading="lazy" src="img/blog1.jpg" alt="blog image">
                 </div>
                 <div class="post--content">
                     <h4 class="no--margin">Types of Coffee Beans</h4>
@@ -49,7 +69,7 @@
             </article>
             <article class="blog--post">
                 <div class="post--img">
-                    <img src="img/blog2.jpg" alt="blog image">
+                    <img loading="lazy" src="img/blog2.jpg" alt="blog image">
                 </div>
                 <div class="post--content">
                     <h4 class="no--margin">3 Delicious Coffee Recipes</h4>
@@ -61,7 +81,8 @@
             </article>
             <article class="blog--post">
                 <div class="post--img">
-                    <img src="img/blog3.jpg" alt="blog image">
+                    <img loading="lazy" src="img/blog3.jpg" alt="blog image"> 
+                    <!-- Esto sirve para cargar la imagen cuando requiera verse -->
                 </div>
                 <div class="post--content">
                     <h4 class="no--margin"> Coffee Benefits</h4>
